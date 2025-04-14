@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Patients</title>
+</head>
+<body>
+<h1>Patients</h1>
+<ul>
+    <li th:each="patient : ${patients}">
+        <span th:text="'ID: ' + ${patient.id} + ' - ' + ${patient.name}"></span>
+    </li>
+</ul>
+<p><a th:href="@{/}">Back to Home</a></p>
+</body>
+</html>

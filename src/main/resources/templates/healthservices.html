@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Health Services</title>
+</head>
+<body>
+<h1>Health Services</h1>
+<ul>
+    <li th:each="service : ${services}">
+        <span th:text="'ID: ' + ${service.id} + ' - ' + ${service.description} + ' (' + ${service.type} + ')'"></span>
+    </li>
+</ul>
+<p><a th:href="@{/}">Back to Home</a></p>
+</body>
+</html>

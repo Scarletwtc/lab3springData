@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Health Issues</title>
+</head>
+<body>
+<h1>Health Issues</h1>
+<ul>
+    <li th:each="issue : ${issues}">
+        <span th:text="'ID: ' + ${issue.id} + ' - ' + ${issue.type}"></span>
+    </li>
+</ul>
+<p><a th:href="@{/}">Back to Home</a></p>
+</body>
+</html>

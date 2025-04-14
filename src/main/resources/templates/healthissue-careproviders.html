@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Care Providers for Health Issue</title>
+</head>
+<body>
+<h1>Care Providers for Health Issue: <span th:text="${issueType}"></span></h1>
+<ul>
+    <li th:each="provider : ${providers}">
+        <span th:text="'Name: ' + ${provider.name} + ', Specialty: ' + ${provider.specialty}"></span>
+    </li>
+</ul>
+<p><a th:href="@{/queries}">Back to Queries</a></p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Patients for Care Provider</title>
+</head>
+<body>
+<h1>Patients seen by <span th:text="${providerName}"></span></h1>
+<ul>
+    <li th:each="patient : ${patients}">
+        <span th:text="'ID: ' + ${patient.id} + ' - ' + ${patient.name}"></span>
+    </li>
+</ul>
+<p><a th:href="@{/queries}">Back to Queries</a></p>
+</body>
+</html>
