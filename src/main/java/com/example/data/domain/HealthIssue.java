@@ -12,6 +12,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(exclude = {"patient", "healthServices"})
+//we have bidirectional so we wanna avoid recursion
 public class HealthIssue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

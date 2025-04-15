@@ -37,7 +37,6 @@ public class HealthcareController {
         this.healthServiceService = healthServiceService;
     }
 
-    // --- Basic Listing Pages ---
 
     // Index page with links
     @GetMapping("/")
@@ -50,7 +49,7 @@ public class HealthcareController {
     public String listPatients(Model model) {
         List<Patient> patients = patientService.findAll();
         model.addAttribute("patients", patients);
-        return "patients"; // See patients.html below.
+        return "patients";
     }
 
     // List all care providers
@@ -58,7 +57,7 @@ public class HealthcareController {
     public String listCareProviders(Model model) {
         List<CareProvider> providers = careProviderService.findAll();
         model.addAttribute("providers", providers);
-        return "careproviders"; // See careproviders.html below.
+        return "careproviders";
     }
 
     // List all health issues
@@ -66,7 +65,7 @@ public class HealthcareController {
     public String listHealthIssues(Model model) {
         List<HealthIssue> issues = healthIssueService.findAll();
         model.addAttribute("issues", issues);
-        return "healthissues"; // See healthissues.html below.
+        return "healthissues";
     }
 
     // List all health services
@@ -74,15 +73,14 @@ public class HealthcareController {
     public String listHealthServices(Model model) {
         List<HealthService> services = healthServiceService.findAll();
         model.addAttribute("services", services);
-        return "healthservices"; // See healthservices.html below.
-    }
+        return "healthservices";     }
 
-    // --- Queries Page ---
+
 
     // Display a page that has forms for running the queries
     @GetMapping("/queries")
     public String queriesPage() {
-        return "queries"; // See queries.html below.
+        return "queries";
     }
 
     // Query 1: Given patient ID, display both all health issues and those with at least one service.
